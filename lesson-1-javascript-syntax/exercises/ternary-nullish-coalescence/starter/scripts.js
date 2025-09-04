@@ -9,7 +9,7 @@ currentTheme = userTheme ?? defaultTheme;
 
 // Form validation
 function validateForm(email) {
-    let errorMessage = !email ? 'Email is required' : null;
+    let errorMessage = (!email) ? 'Email is required' : null;
 
     return errorMessage;
 }
@@ -32,14 +32,7 @@ function processUserData(userData) {
 
 // Dynamic class assignment
 function getButtonClass(isActive) {
-    let buttonClass;
-   
-    if (isActive) {
-        buttonClass = 'btn-active';
-    } else {
-        buttonClass = 'btn-inactive';
-    }
-
+    let buttonClass = (isActive) ? 'btn-active' : 'btn-inactive';
 
     return buttonClass;
 }
