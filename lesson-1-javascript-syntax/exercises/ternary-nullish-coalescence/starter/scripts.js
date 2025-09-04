@@ -3,11 +3,7 @@ let userTheme = localStorage.getItem('theme');
 let defaultTheme = 'light';
 let currentTheme;
 
-if (userTheme) {
-    currentTheme = userTheme;
-} else {
-    currentTheme = defaultTheme;
-}
+currentTheme = userTheme ?? defaultTheme;
 
 // Form validation
 function validateForm(email) {
