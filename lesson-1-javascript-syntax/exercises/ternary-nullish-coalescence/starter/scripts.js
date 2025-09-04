@@ -1,3 +1,5 @@
+const { use } = require("react");
+
 // User preference handling
 let userTheme = localStorage.getItem('theme');
 let defaultTheme = 'light';
@@ -19,17 +21,9 @@ function processUserData(userData) {
         return
     }
    
-    if (userData.userName?.trim()) {
-        const userName = userData.userName?.trim()
-    } else {
-        const userName = 'Friend'
-    }
+    const userName = userData.userName?.trim() ?? 'Friend';
 
-    if (userData.notifications > 1 || userData.notifications == 0) {
-        const notificationText = `${userData.notifications} notifications`
-    } else {
-        const notificationText = `${userData.notifications} notification`
-    }
+    const notificationText = `${userData.notifications} ${(userData.notifications > 1 || userData.notifications == 0) ? 'notification' : 'notification'}`;
 
     const greeting = `Hello, ${userName}. You have ${notificationText}`
    
