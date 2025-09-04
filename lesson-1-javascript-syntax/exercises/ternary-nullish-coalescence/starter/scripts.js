@@ -7,13 +7,7 @@ currentTheme = userTheme ?? defaultTheme;
 
 // Form validation
 function validateForm(email) {
-    let errorMessage = '';
-   
-    if (!email) {
-        errorMessage = 'Email is required';
-    } else {
-        errorMessage = null;
-    }
+    let errorMessage = !email ? 'Email is required' : null;
 
     return errorMessage;
 }
