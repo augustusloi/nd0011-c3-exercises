@@ -5,6 +5,12 @@ const restyleOtter = async() => {
     
     const cardContainer = titleDiv.nextElementSibling;
     cardContainer.id = 'cardContainer';
+
+    const profileCard = cardContainer.firstElementChild;
+    profileCard.classList.remove('oldProfileCard');
+    profileCard.classList.add('profileCard');
+    profileCard.style.removeProperty('background-color');
+    profileCard.style.removeProperty('color');
 }
 
 restyleOtter();
