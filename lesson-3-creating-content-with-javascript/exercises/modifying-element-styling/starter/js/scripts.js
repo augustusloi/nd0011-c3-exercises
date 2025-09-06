@@ -16,6 +16,11 @@ const restyleOtter = async() => {
     picFrame.classList.add('picFrame');
     const userInfo = picFrame.nextElementSibling;
     userInfo.classList.add('userInfo');
+
+    const buttonDiv = userInfo.lastElementChild;
+    const onlineButton = buttonDiv.firstElementChild;
+    onlineButton.classList.toggle('active');
+    onlineButton.textContent = `Online now!`;
 }
 
 restyleOtter();
