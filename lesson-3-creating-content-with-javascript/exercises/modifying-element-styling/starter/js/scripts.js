@@ -11,6 +11,11 @@ const restyleOtter = async() => {
     profileCard.classList.add('profileCard');
     profileCard.style.removeProperty('background-color');
     profileCard.style.removeProperty('color');
+
+    const picFrame = profileCard.firstElementChild;
+    picFrame.classList.add('picFrame');
+    const userInfo = picFrame.nextElementSibling;
+    userInfo.classList.add('userInfo');
 }
 
 restyleOtter();
