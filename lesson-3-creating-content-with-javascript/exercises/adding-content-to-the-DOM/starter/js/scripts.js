@@ -1,5 +1,6 @@
 const rebuildOtter = async() => {
-    // Write your code here
+    const titleDiv = document.querySelector('body').firstElementChild;
+    titleDiv.classList.add('title');
 }
 
 rebuildOtter();
