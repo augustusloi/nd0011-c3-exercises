@@ -41,6 +41,10 @@ const rebuildOtter = async() => {
     profileDiv.append(buttonDiv);
 
     profileCardDiv.append(profileDiv);
+
+    documentFragment.append(profileCardDiv);
+
+    cardSection.append(documentFragment);
 }
 
 rebuildOtter();
