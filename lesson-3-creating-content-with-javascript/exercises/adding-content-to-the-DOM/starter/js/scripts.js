@@ -19,6 +19,18 @@ const rebuildOtter = async() => {
 
     pictureDiv.append(picture);
     profileCardDiv.append(pictureDiv);
+
+    const profileDiv = document.createElement('div');
+    profileDiv.classList.add('userInfo');
+
+    const userInfoDiv = document.createElement('div');
+    const userName = document.createElement('h2');
+    userName.textContent = 'Whiskers McOtter';
+    const userBio = document.createElement('p');
+    userBio.textContent = `Hi! My name is Whiskers McOtter and I'm from Seattle, Washington. Some of my favorite things are Frappuccinos and fish.`;
+
+    userInfoDiv.append(userName, userBio);
+    profileDiv.append(userInfoDiv);
 }
 
 rebuildOtter();
