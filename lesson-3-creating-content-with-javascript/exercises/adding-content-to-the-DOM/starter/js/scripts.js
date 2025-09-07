@@ -31,6 +31,16 @@ const rebuildOtter = async() => {
 
     userInfoDiv.append(userName, userBio);
     profileDiv.append(userInfoDiv);
+
+    const buttonDiv = document.createElement('div');
+    const onlineButton = document.createElement('button');
+    onlineButton.classList.add('active');
+    onlineButton.textContent = 'Online now!';
+
+    buttonDiv.append(onlineButton);
+    profileDiv.append(buttonDiv);
+
+    profileCardDiv.append(profileDiv);
 }
 
 rebuildOtter();
