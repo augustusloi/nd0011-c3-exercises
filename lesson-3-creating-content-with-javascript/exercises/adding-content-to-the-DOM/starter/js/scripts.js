@@ -9,6 +9,16 @@ const rebuildOtter = async() => {
 
     const profileCardDiv = document.createElement('div');
     profileCardDiv.classList.add('profileCard');
+
+    const pictureDiv = document.createElement('div');
+    pictureDiv.classList.add('picFrame');
+
+    const picture = document.createElement('img');
+    picture.src = './images/otter_profile.webp';
+    picture.alt = 'profilePic';
+
+    pictureDiv.append(picture);
+    profileCardDiv.append(pictureDiv);
 }
 
 rebuildOtter();
