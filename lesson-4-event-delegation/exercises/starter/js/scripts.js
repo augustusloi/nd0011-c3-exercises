@@ -6,3 +6,10 @@ const handleClick = (event) => {
     alert(`You selected the ${selectedCard}. Good Choice!`);
 };
 
+const cardListener = () => {
+    const cardContainer = document.querySelector('.product-grid');
+
+    cardContainer.addEventListener('pointerdown', handleClick);
+};
+
+cardListener();
