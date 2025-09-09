@@ -4,7 +4,7 @@ const grabNewMessages = async () => {
 
     try {
       const data =  await simulateNetworkRequest();
-      notificationWindow.textContent = `You have ${data} new messages.`
+      notificationWindow.textContent = `You have ${data} new notification${(data === 1) ? '' : 's'}.`
     } catch (error) {
 
     }
