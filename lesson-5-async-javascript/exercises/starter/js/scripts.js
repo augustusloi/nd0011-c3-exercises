@@ -1,4 +1,4 @@
-const grabNewMessages = () => {
+const grabNewMessages = async () => {
     //only edit this function
     const notificationWindow = document.querySelector('.notificationAlerts').firstElementChild
     const data =  simulateNetworkRequest()
