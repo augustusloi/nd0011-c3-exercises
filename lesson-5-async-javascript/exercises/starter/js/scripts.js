@@ -6,7 +6,8 @@ const grabNewMessages = async () => {
       const data =  await simulateNetworkRequest();
       notificationWindow.textContent = `You have ${data} new notification${(data === 1) ? '' : 's'}.`
     } catch (error) {
-
+      notificationWindow.textContent = `There was an error fetching new notifications`;
+      console.error(error);
     }
 }
 
