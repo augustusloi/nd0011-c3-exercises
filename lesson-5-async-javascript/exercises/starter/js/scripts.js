@@ -1,8 +1,11 @@
 const grabNewMessages = async () => {
-    //only edit this function
-    const notificationWindow = document.querySelector('.notificationAlerts').firstElementChild
-    const data =  simulateNetworkRequest()
-    notificationWindow.textContent = `You have ${data} new messages.`
+    try {
+      const notificationWindow = document.querySelector('.notificationAlerts').firstElementChild
+      const data =  simulateNetworkRequest()
+      notificationWindow.textContent = `You have ${data} new messages.`
+    } catch (error) {
+
+    }
 }
 
 
